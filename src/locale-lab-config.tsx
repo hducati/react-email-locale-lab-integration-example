@@ -1,4 +1,5 @@
 import { browserTranslatorProvider, defineEmailLab } from 'react-email-locale-lab';
+import { viteSourceUpdates } from 'react-email-locale-lab/vite';
 import { OrderConfirmedEmail } from './emails/order-confirmed';
 import { PasswordResetEmail } from './emails/password-reset';
 import { ProductDigestEmail } from './emails/product-digest';
@@ -6,7 +7,7 @@ import { LayoutStressTestEmail } from './emails/layout-stress-test';
 
 export default defineEmailLab({
   routeBasePath: '/preview',
-  watchPaths: ['src/emails'],
+  sourceUpdates: viteSourceUpdates(import.meta.hot, { watchPaths: ['src/emails'] }),
   sourceLocale: { code: 'en', label: 'English' },
   locales: [
     { code: 'ar', label: 'العربية' },
