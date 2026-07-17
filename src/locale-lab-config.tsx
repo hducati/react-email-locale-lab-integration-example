@@ -6,6 +6,7 @@ import { LayoutStressTestEmail } from './emails/layout-stress-test';
 
 export default defineEmailLab({
   routeBasePath: '/preview',
+  watchPaths: ['src/emails'],
   sourceLocale: { code: 'en', label: 'English' },
   locales: [
     { code: 'ar', label: 'العربية' },

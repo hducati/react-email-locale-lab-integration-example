@@ -18,8 +18,8 @@ importers:
         specifier: ^6.9.0
         version: 6.9.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       react-email-locale-lab:
-        specifier: ^0.2.0
-        version: 0.2.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+        specifier: ^0.3.0
+        version: 0.3.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
     devDependencies:
       '@react-email/ui':
         specifier: 6.9.0
@@ -1053,8 +1053,8 @@ packages:
     peerDependencies:
       react: ^19.2.7
 
-  react-email-locale-lab@0.2.0:
-    resolution: {integrity: sha512-E7bFe7JXkybi+y8xGxqDuK/MiTK0cPTCH3wuQPn7dwej+PCnCigxJlZSRCt+SmFVTrjvIZZh6VkLGo12H3gA3w==}
+  react-email-locale-lab@0.3.0:
+    resolution: {integrity: sha512-UQQVeerjDbFEdUpfc71VkToVDPx3gszBWNtDdO0xlL0RUnxCYSuV+2l29c4WlCAVtTi5X0/+Zg8WGtFCGLZvAg==}
     peerDependencies:
       react: ^18.0.0 || ^19.0.0
       react-dom: ^18.0.0 || ^19.0.0
@@ -2130,7 +2130,7 @@ snapshots:
       react: 19.2.7
       scheduler: 0.27.0
 
-  react-email-locale-lab@0.2.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7):
+  react-email-locale-lab@0.3.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7):
     dependencies:
       react: 19.2.7
       react-dom: 19.2.7(react@19.2.7)
