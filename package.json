@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --port 4174",
+    "dev": "locale-lab dev --dir src/emails",
     "email:dev": "email dev --dir src/emails --port 3000",
     "build": "tsc -b && vite build",
     "check": "pnpm build"
@@ -14,7 +14,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-email": "^6.9.0",
-    "react-email-locale-lab": "^0.5.0"
+    "react-email-locale-lab": "^0.6.1"
   },
   "devDependencies": {
     "@react-email/ui": "6.9.0",
