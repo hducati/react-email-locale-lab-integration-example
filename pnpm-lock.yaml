@@ -21,8 +21,8 @@ importers:
         specifier: ^6.9.0
         version: 6.9.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       react-email-locale-lab:
-        specifier: ^0.6.1
-        version: 0.6.1(@types/node@26.1.1)(jiti@2.6.1)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+        specifier: ^0.7.0
+        version: 0.7.0(@types/node@26.1.1)(jiti@2.6.1)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
     devDependencies:
       '@react-email/ui':
         specifier: 6.9.0
@@ -1085,8 +1085,8 @@ packages:
     peerDependencies:
       react: ^19.2.7
 
-  react-email-locale-lab@0.6.1:
-    resolution: {integrity: sha512-8e1CWsypop6cvWDyJJb0hOFm5esDF+UtYKV03M6CXGDcC4APqs64vVa8trpm2ofOL9ZJ0LEHoMAEi/VNzllOIg==}
+  react-email-locale-lab@0.7.0:
+    resolution: {integrity: sha512-sm066O2XHvvnkjwdSB4UEGASGz1CsLw/UY6LyphARsJGjOdLXVEJtmtqINW3RxOJRyVTLGIhkcRsG3CCLKL+3g==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -2169,7 +2169,7 @@ snapshots:
       react: 19.2.7
       scheduler: 0.27.0
 
-  react-email-locale-lab@0.6.1(@types/node@26.1.1)(jiti@2.6.1)(react-dom@19.2.7(react@19.2.7))(react@19.2.7):
+  react-email-locale-lab@0.7.0(@types/node@26.1.1)(jiti@2.6.1)(react-dom@19.2.7(react@19.2.7))(react@19.2.7):
     dependencies:
       '@vitejs/plugin-react': 4.7.0(vite@7.3.6(@types/node@26.1.1)(jiti@2.6.1))
       react: 19.2.7
