@@ -1,18 +1,65 @@
-# React Email Locale lab Integration
+# React Email Locale Lab integration
 
-This project is a simple integration created to test the viability of the `react-email-locale-lab` library.
+This repository is a working example of adding [`react-email-locale-lab`](https://www.npmjs.com/package/react-email-locale-lab) to an existing React Email project.
 
-The idea for the library came from an internal need I encountered while working on a company project: previewing React Email templates in multiple languages while editing them. This repository provides a small, realistic environment for validating that workflow before the library is further refined.
+It contains regular React Email templates and demonstrates the convention-based setup introduced in Locale Lab 0.6: the CLI owns the development host and discovers templates automatically, so the consuming project does not need a second Vite bootstrap or a manually maintained template registry.
 
-It contains regular React Email templates connected to the local multi-language preview library. The current goal is only to prove that the integration works and that the proposed developer experience is feasible.
+## Requirements
 
-## Running locally
+- Node.js 20.19 or newer, or Node.js 22.12 or newer
+- pnpm 10 or a compatible package manager
+
+## Setup
 
 ```bash
 pnpm install
+```
+
+Locale policy lives in [`locale-lab.config.ts`](./locale-lab.config.ts). It contains only the source locale and the target locales available for comparison:
+
+```ts
+import { defineEmailLabConfig } from 'react-email-locale-lab/config';
+
+export default defineEmailLabConfig({
+  sourceLocale: { code: 'en', label: 'English' },
+  locales: [{ code: 'de', label: 'Deutsch' }],
+});
+```
+
+The templates in this example live under `src/emails`, so the development script supplies that directory explicitly:
+
+```json
+{
+  "scripts": {
+    "dev": "locale-lab dev --dir src/emails"
+  }
+}
+```
+
+React Email's default convention is `./emails`. Projects using that location can run `locale-lab dev` without `--dir`.
+
+## Run the Locale Lab
+
+```bash
 pnpm dev
 ```
 
-Open [http://localhost:4174/preview/order](http://localhost:4174/preview/order), select the desired languages and edit a template in `src/emails`.
+Open [http://localhost:4174/preview/order-confirmed](http://localhost:4174/preview/order-confirmed), select up to three target languages, and edit a template under `src/emails`. Locale Lab automatically discovers template modules, reuses their React Email `PreviewProps`, and refreshes the comparison when source files change.
 
-This is a proof of concept. Features such as CI integration, localization workflows and production-ready translation providers are intentionally outside its current scope Will test this on an actual product with React email.
+The browser's built-in Translator API is used by default, so no translation provider configuration is required for this example.
+
+## React Email preview
+
+The regular React Email preview remains available independently:
+
+```bash
+pnpm email:dev
+```
+
+It runs at [http://localhost:3000](http://localhost:3000).
+
+## Production demo
+
+The repository retains an advanced embedded host for its deployable demo. It reuses the same locale policy from `locale-lab.config.ts`; the extra files under `src/` are deployment infrastructure and are not required by projects using the CLI-only development workflow.
+
+Locale Lab translations are stress-test fixtures for visual inspection. They do not replace reviewed application translations or email-client compatibility testing.
