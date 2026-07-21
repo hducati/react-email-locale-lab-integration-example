@@ -2,7 +2,7 @@
 
 This repository is a working example of adding [`react-email-locale-lab`](https://www.npmjs.com/package/react-email-locale-lab) to an existing React Email project.
 
-It contains regular React Email templates and demonstrates the convention-based setup introduced in Locale Lab 0.6: the CLI owns the development host and discovers templates automatically, so the consuming project does not need a second Vite bootstrap or a manually maintained template registry.
+It contains regular React Email templates and demonstrates the current convention-based setup: the CLI owns the development host and discovers templates automatically, so the consuming project does not need a second Vite bootstrap or a manually maintained template registry.
 
 ## Requirements
 
@@ -44,7 +44,9 @@ React Email's default convention is `./emails`. Projects using that location can
 pnpm dev
 ```
 
-Open [http://localhost:4174/preview/order-confirmed](http://localhost:4174/preview/order-confirmed), select up to three target languages, and edit a template under `src/emails`. Locale Lab automatically discovers template modules, reuses their React Email `PreviewProps`, and refreshes the comparison when source files change.
+Open [http://localhost:4174/preview/order-confirmed](http://localhost:4174/preview/order-confirmed), select the target languages you want to compare, and edit a template under `src/emails`. Locale Lab automatically discovers template modules, reuses their React Email `PreviewProps`, and refreshes the comparison when source files change.
+
+Locale Lab 0.7 does not impose a selection limit. Six to eight translations is a comfortable range for side-by-side review, but larger comparison sets remain available when the workflow requires them. Selected languages are preserved in the URL, including selections beyond that recommended range.
 
 The browser's built-in Translator API is used by default, so no translation provider configuration is required for this example.
 
